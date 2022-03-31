@@ -8,13 +8,17 @@ import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.bitbuy.userregistration.entity.UserAccountEntity;
 import com.bitbuy.userregistration.response.UserAccountResponse;
 
+@SpringBootTest
 public class UserAccountEntityToResponseConverterTest {
 
-	private UserAccountEntityToResponseConverter converter = new UserAccountEntityToResponseConverter();
+	@Autowired
+	private UserAccountEntityToResponseConverter converter;
 
 	@ParameterizedTest
 	@MethodSource("entityProvider")
