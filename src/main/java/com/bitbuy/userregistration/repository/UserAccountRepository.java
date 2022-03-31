@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.bitbuy.userregistration.entity.UserAccountEntity;
 
 @Repository
-public interface  UserRepository extends CrudRepository<UserAccountEntity, String> {
+public interface  UserAccountRepository extends CrudRepository<UserAccountEntity, String> {
 	
 }
